@@ -1,0 +1,13 @@
+model VoteGame {
+    id          Int       @id @default(autoincrement())
+    uid         String    @unique
+    event_uid   String
+    name        String
+    description String
+    choices_uid String?
+    is_active   Boolean   @default(true)
+    created_at  DateTime  @default(now())
+    updated_at  DateTime?
+
+    @@map("vote_game")
+}

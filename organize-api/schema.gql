@@ -1,0 +1,839 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Organizer {
+  """Example field (placeholder)"""
+  id: Int!
+
+  """Organizer verse_uid"""
+  verse_uid: String!
+
+  """Organizer uuid"""
+  uuid: String!
+
+  """organize_uid"""
+  organize_uid: String
+
+  """Organizer name"""
+  name: String!
+
+  """Organizer lastname"""
+  lastname: String!
+
+  """Organizer phone_number"""
+  phone_number: String!
+
+  """Organizer email"""
+  email: String!
+
+  """Organizer username"""
+  username: String!
+
+  """Organizer password"""
+  password: String!
+
+  """Organizer city"""
+  city: String!
+
+  """Organizer country"""
+  country: String!
+
+  """Organizer organization_address"""
+  organization_address: String!
+
+  """Organizer organization_name"""
+  organization_name: String!
+
+  """Organizer cms_access_token"""
+  cms_access_token: String
+  is_active: Boolean!
+  created_at: DateTime!
+  updated_at: DateTime
+  package_uid: String
+
+  """admin, staff, owner"""
+  role: String
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type UserOrganizer {
+  """Organizer verse_uid"""
+  verse_uid: String!
+
+  """Organizer uuid"""
+  uuid: String!
+
+  """organize_uid"""
+  organize_uid: String
+
+  """Organizer name"""
+  name: String!
+
+  """Organizer lastname"""
+  lastname: String!
+
+  """Organizer phone_number"""
+  phone_number: String!
+
+  """Organizer email"""
+  email: String!
+
+  """Organizer city"""
+  city: String!
+
+  """Organizer country"""
+  country: String!
+
+  """Organizer organization_address"""
+  organization_address: String!
+
+  """Organizer organization_name"""
+  organization_name: String!
+
+  """Organizer cms_access_token"""
+  cms_access_token: String
+  is_active: Boolean!
+  created_at: DateTime!
+  package_uid: String
+}
+
+type PermissionList {
+  id: Int!
+  slug: String!
+  name: String!
+  description: String!
+  is_active: Boolean!
+  created_at: DateTime!
+  updated_at: DateTime
+  deleted_at: DateTime
+}
+
+type PackageList {
+  id: Int!
+  package_uid: String!
+  permission_slug: String!
+  limit_slug: String!
+  limit: Int!
+  unit: String
+  is_active: Boolean!
+  created_at: DateTime!
+  updated_at: DateTime
+  deleted_at: DateTime
+  masterPackage: [Package!]
+  masterPermissionList: PermissionList
+}
+
+type Package {
+  id: Int!
+  uuid: String!
+  name: String!
+  description: String!
+  image_url: String!
+  price: Float!
+  discount: Float!
+  periods: Int
+  created_at: DateTime!
+  updated_at: DateTime
+  deleted_at: DateTime
+  packageList: [PackageList!]
+}
+
+type UserPackageOrganizer {
+  package: Package
+}
+
+type Auth {
+  access_token: String!
+}
+
+type FormInputType {
+  id: Int!
+  slug: String!
+  name: String!
+  desciption: String!
+  created_at: DateTime
+  updated_at: DateTime
+  deleted_at: DateTime
+}
+
+type QuestionForm {
+  id: Int!
+  uuid: String!
+  form_uid: String!
+  name: String!
+  description: String!
+  input_type_slug: String!
+  choice_list: String
+  created_at: DateTime
+  updated_at: DateTime
+  deleted_at: DateTime
+  answer: [Answer!]
+}
+
+type Answer {
+  id: Int!
+  user_uid: String!
+  question_uid: String!
+  form_uid: String!
+  result: String!
+  created_at: DateTime!
+  updated_at: DateTime
+  deleted_at: DateTime
+  RegisterForm: RegisterForm
+  QuestionForm: QuestionForm
+}
+
+type UseTicket {
+  id: Int!
+  ticket_user_id: Int!
+  ticket_no: Int!
+  created_at: DateTime!
+}
+
+type TicketUser {
+  id: Int!
+  ticket_uid: String!
+  ticket_no: Int!
+  user_uid: String!
+  quantity: Int!
+  price: Float!
+  total: Float!
+
+  """payment_type"""
+  payment_type: String!
+
+  """payment_status"""
+  payment_status: String!
+  use_status: String!
+  created_at: DateTime
+  updated_at: DateTime
+  deleted_at: DateTime
+  use_tickets: [UseTicket!]
+}
+
+type Ticket {
+  id: Int!
+  registerform_uid: String!
+  uuid: String!
+  name: String!
+  description: String!
+  image_url: String!
+  price: Float!
+
+  """limit, unlimit"""
+  limit_type: String!
+  limit: Int!
+  amount: Int!
+  discount_option: Boolean!
+  created_at: DateTime
+  updated_at: DateTime
+  deleted_at: DateTime
+  ticket_user: [TicketUser!]
+}
+
+type RegisterForm {
+  id: Int!
+  uuid: String!
+  event_uid: String!
+  topic: String!
+  description: String!
+  require: Boolean!
+  is_active: Boolean!
+  start_date: DateTime
+  end_date: DateTime
+  created_at: DateTime
+  updated_at: DateTime
+  deleted_at: DateTime
+  form_type: String!
+  questions: [QuestionForm!]
+  answer: [Answer!]
+  ticket: [Ticket!]
+}
+
+type SummaryRegister {
+  total_register: Int!
+  total_ticket: Int!
+  total_event: Int!
+  total_revenue: Float!
+  average_event: Float!
+  average_register: Float!
+  average_revenue: Float!
+  average_ticket: Float!
+}
+
+type ReportRegisterWeek {
+  day: String!
+  count: Int!
+}
+
+type SummaryEvent {
+  total_register: Int!
+  total_ticket: Int!
+  total_view: Int!
+  total_revenue: Float!
+}
+
+type ReportUser {
+  header: String!
+  data: [Answer!]!
+}
+
+type TopEvent {
+  event_name: String!
+  amount: Int!
+}
+
+type VoteGameQuestion {
+  id: Int!
+  uid: String!
+  event_uid: String!
+  vote_game_uid: String!
+  question: String!
+  is_active: Boolean!
+  created_at: DateTime!
+  updated_at: DateTime
+}
+
+type VoteGame {
+  id: Int!
+  uid: String!
+  event_uid: String!
+  name: String!
+  description: String!
+  choices_uid: String
+  is_active: Boolean!
+  created_at: DateTime!
+  updated_at: DateTime
+  questions: [VoteGameQuestion!]
+}
+
+type VoteGameChoice {
+  id: Int!
+  uid: String!
+  event_uid: String!
+  choices: String
+  is_active: Boolean!
+  created_at: DateTime!
+  updated_at: DateTime
+  questions: [VoteGameQuestion!]
+}
+
+type VoteGameResult {
+  id: Int!
+  event_uid: String
+  vote_game_uid: String
+  result: String!
+  question_uid: String!
+  created_at: DateTime!
+}
+
+type PromotionHistory {
+  id: Int!
+  promotion_id: Int!
+  user_uid: String!
+  created_at: DateTime!
+}
+
+type Promotion {
+  id: Int!
+  name: String!
+  organize_uid: String!
+  event_uid: String!
+  promotion_code: String!
+
+  """percent or currency"""
+  discount_type: String!
+  value: Float!
+
+  """0 = unlimit, >0 = limit"""
+  limit: Int!
+
+  """fix limit"""
+  amount: Int!
+  is_active: Boolean!
+  start_at: DateTime!
+  expired_at: DateTime!
+  created_at: DateTime!
+  updated_at: DateTime
+  deleted_at: DateTime
+  history: [PromotionHistory!]
+}
+
+type Query {
+  organizers: [Organizer!]!
+  GatAllStaffByOrganizeUid(organize_uid: String!): [Organizer!]!
+  organizerPackage(uid: String!): UserPackageOrganizer!
+  organizer: UserOrganizer!
+  packages: [Package!]!
+  packageByUid(uid: String!): Package!
+  packageList(id: Int!): PackageList!
+  permissionList(id: Int!): PermissionList!
+  formInputTypeAll: [FormInputType!]!
+  registerFormByEventUid(event_uid: String!): [RegisterForm!]!
+  registerFormByEventUidAndFormType(event_uid: String!, form_type: String!): [RegisterForm!]!
+  registerFormByUid(uid: String!): RegisterForm!
+  registerForms: [RegisterForm!]!
+  SummaryCardDashboard(organize_uid: String!): SummaryRegister!
+  ReportSummaryUserRegisterWeek(organize_uid: String!): [ReportRegisterWeek!]!
+  SummaryRegisteWeekByEvent(event_uid: String!): [ReportRegisterWeek!]!
+  SummaryCardboadByEvent(event_uid: String!): SummaryEvent!
+  userRegisterEvent(event_uid: String!): Float!
+  ReportUserRegisterByEvent(event_uid: String!): [ReportUser!]!
+  ReportUserRegisterAllInWeek(organize_uid: String!): [ReportRegisterWeek!]!
+  Top4Report(type: String!, organize_uid: String!): [TopEvent!]!
+  questionFormByFormUid(form_uid: String!): [QuestionForm!]!
+  questionFormByUid(uid: String!): QuestionForm!
+  answerByFormUid(form_uid: String!): [Answer!]!
+  answerByQuestionUid(question_uid: String!): [Answer!]!
+  voteGameByEventUid(event_uid: String!): [VoteGame!]!
+  voteGameByUid(uid: String!): VoteGame!
+  voteGameChoiceByEventUid(event_uid: String!): [VoteGameChoice!]!
+  voteGameChoiceByUid(uid: String!): VoteGameChoice!
+  voteGameQuestionByVoteGameUid(vote_game_uid: String!): [VoteGameQuestion!]!
+  voteGameQuestionByEventUid(event_uid: String!): [VoteGameQuestion!]!
+  voteGameResultByEventUid(vote_game_uid: String!): VoteGameResult!
+  promotions: [Promotion!]!
+  findPromotionByEventUid(event_uid: String!): [Promotion!]!
+  promotionById(id: Int!): Promotion!
+  promotionHistory: [PromotionHistory!]!
+  promotionHistoryById(id: Int!): PromotionHistory!
+  tickets: [Ticket!]!
+  ticket(id: Int!): Ticket!
+  ticketUser: [TicketUser!]!
+  ticketUserById(id: Int!): TicketUser!
+  UseTicket: [UseTicket!]!
+  UseTicketById(id: Int!): UseTicket!
+}
+
+type Mutation {
+  registerOrganizer(registerOrganizerInput: CreateOrganizerInput!): Organizer!
+  registerOrganizerStaff(registerOrganizerStaffInput: CreateStaffInput!, admin_uid: String!): Organizer!
+  updateOrganizer(updateOrganizerInput: UpdateOrganizerInput!): Organizer!
+  updateOrganizerIsActive(updateOrganizerInput: UpdateOrganizerInput!): Organizer!
+  updateToken(updateOrganizerInput: UpdateOrganizerInput!): Organizer!
+  removeOrganizer(id: Int!): Organizer!
+  login(loginInput: LoginInput!): Auth!
+  createPackage(createPackageInput: CreatePackageInput!): Package!
+  updatePackage(updatePackageInput: UpdatePackageInput!): Package!
+  removePackage(id: Int!): Package!
+  createPackageList(createPackageListInput: CreatePackageListInput!): PackageList!
+  updatePackageList(updatePackageListInput: UpdatePackageListInput!): PackageList!
+  removePackageList(id: Int!): PackageList!
+  createPermissionList(createPermissionListInput: CreatePermissionListInput!): PermissionList!
+  updatePermissionList(updatePermissionListInput: UpdatePermissionListInput!): PermissionList!
+  removePermissionList(id: Int!): PermissionList!
+  createRegisterForm(createRegisterFormInput: CreateRegisterFormInput!): RegisterForm!
+  updateRegisterForm(updateRegisterFormInput: UpdateRegisterFormInput!): RegisterForm!
+  removeRegisterForm(id: Int!): RegisterForm!
+  createQuestionForm(createQuestionFormInput: CreateQuestionFormInput!): QuestionForm!
+  createQuestionFormList(createQuestionFormInput: [CreateQuestionFormInput!]!): Int!
+  updateQuestionForm(updateQuestionFormInput: UpdateQuestionFormInput!): QuestionForm!
+  removeQuestionForm(id: Int!): QuestionForm!
+  createAnswer(createAnswerInput: CreateAnswerInput!): Answer!
+  createAnswerList(createAnswerInput: [CreateAnswerInput!]!): Int!
+  removeAnswer(id: Int!): Answer!
+  createVoteGame(createVoteGame: CreateVoteGameInput!): VoteGame!
+  updateVoteGame(updateVoteGameInput: UpdateVoteGameInput!): VoteGame!
+  removeVoteGame(id: Int!): VoteGame!
+  createVoteGameChoice(createVoteChoiceGame: CreateVoteGameChoiceInput!): VoteGameChoice!
+  updateVoteGameChoice(updateVoteGameChoiceInput: UpdateVoteGameChoiceInput!): VoteGameChoice!
+  removeVoteGameChoice(id: Int!): VoteGameChoice!
+  createVoteGameQuestion(createVoteGameQuestionInput: CreateVoteGameQuestionInput!): VoteGameQuestion!
+  removeVoteGameQuestion(id: Int!): VoteGameQuestion!
+  createVoteGameResult(createVoteGameResult: CreateVoteGameResultInput!): VoteGameResult!
+  updateVoteGameResult(updateVoteGameResultInput: UpdateVoteGameResultInput!): VoteGameResult!
+  removeVoteGameResult(id: Int!): VoteGameResult!
+  createPromotion(createPromotionInput: CreatePromotionInput!): Promotion!
+  updatePromotion(updatePromotionInput: UpdatePromotionInput!): Promotion!
+  removePromotion(id: Int!): Promotion!
+  createPromotionHistory(createPromotionHistoryInput: CreatePromotionHistoryInput!): PromotionHistory!
+  updatePromotionHistory(updatePromotionHistoryInput: UpdatePromotionHistoryInput!): PromotionHistory!
+  removePromotionHistory(id: Int!): PromotionHistory!
+  createTicket(createTicketInput: CreateTicketInput!): Ticket!
+  updateTicket(updateTicketInput: UpdateTicketInput!): Ticket!
+  removeTicket(id: Int!): Ticket!
+  createTicketUser(createTicketUserInput: CreateTicketUserInput!): TicketUser!
+  updatePaymentStatusOutOfAmount(ticket_uid: String!): TicketUser!
+  updateTicketUserPaymentStatus(ticket_no: Float!, payment_status: String!): TicketUser!
+  removeTicketUser(id: Int!): TicketUser!
+  createUseTicket(createUseTicketInput: CreateUseTicketInput!): UseTicket!
+  updateUseTicket(updateUseTicketInput: UpdateUseTicketInput!): UseTicket!
+  removeUseTicket(id: Int!): UseTicket!
+}
+
+input CreateOrganizerInput {
+  """Organizer verse_uid"""
+  verse_uid: String!
+
+  """Organizer name"""
+  name: String!
+
+  """Organizer lastname"""
+  lastname: String!
+
+  """Organizer phone_number"""
+  phone_number: String!
+
+  """Organizer email"""
+  email: String!
+
+  """Organizer username"""
+  username: String!
+
+  """Organizer password"""
+  password: String!
+
+  """Organizer city"""
+  city: String!
+
+  """Organizer country"""
+  country: String!
+
+  """Organizer organization_address"""
+  organization_address: String!
+
+  """Organizer organization_name"""
+  organization_name: String!
+
+  """Organizer cms_access_token"""
+  cms_access_token: String! = ""
+  is_active: Boolean! = true
+  created_at: DateTime! = "2023-08-03T04:09:57.028Z"
+  package_uid: String!
+  role: String! = "owner"
+}
+
+input CreateStaffInput {
+  """staff name"""
+  name: String!
+
+  """staff lastname"""
+  lastname: String!
+
+  """staff phone_number"""
+  phone_number: String!
+
+  """staff email"""
+  email: String!
+
+  """staff username"""
+  username: String!
+
+  """staff password"""
+  password: String!
+  is_active: Boolean! = true
+  created_at: DateTime! = "2023-08-03T04:09:57.040Z"
+  role: String!
+}
+
+input UpdateOrganizerInput {
+  """Organizer verse_uid"""
+  verse_uid: String
+
+  """Organizer name"""
+  name: String
+
+  """Organizer lastname"""
+  lastname: String
+
+  """Organizer phone_number"""
+  phone_number: String
+
+  """Organizer email"""
+  email: String
+
+  """Organizer username"""
+  username: String
+
+  """Organizer password"""
+  password: String
+
+  """Organizer city"""
+  city: String
+
+  """Organizer country"""
+  country: String
+
+  """Organizer organization_address"""
+  organization_address: String
+
+  """Organizer organization_name"""
+  organization_name: String
+
+  """Organizer cms_access_token"""
+  cms_access_token: String = ""
+  is_active: Boolean = true
+  created_at: DateTime = "2023-08-03T04:09:57.028Z"
+  package_uid: String
+  role: String = "owner"
+
+  """Organizer uuid"""
+  uuid: String!
+  updated_at: DateTime! = "2023-08-03T04:09:57.030Z"
+}
+
+input LoginInput {
+  """Example field username"""
+  username: String!
+
+  """Example field password"""
+  password: String!
+}
+
+input CreatePackageInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdatePackageInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreatePackageListInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdatePackageListInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreatePermissionListInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input UpdatePermissionListInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+input CreateRegisterFormInput {
+  event_uid: String!
+  topic: String!
+  description: String!
+  require: Boolean!
+  is_active: Boolean! = true
+  start_date: DateTime!
+  end_date: DateTime!
+  created_at: DateTime! = "2023-08-03T04:09:57.066Z"
+  form_type: String!
+}
+
+input UpdateRegisterFormInput {
+  event_uid: String
+  topic: String
+  description: String
+  require: Boolean
+  is_active: Boolean = true
+  start_date: DateTime = null
+  end_date: DateTime = null
+  created_at: DateTime = "2023-08-03T04:09:57.066Z"
+  form_type: String
+  id: Int!
+  updated_at: DateTime! = "2023-08-03T04:09:57.067Z"
+}
+
+input CreateQuestionFormInput {
+  form_uid: String!
+  name: String!
+  description: String!
+  input_type_slug: String!
+  choice_list: String!
+  created_at: DateTime! = "2023-08-03T04:09:57.071Z"
+}
+
+input UpdateQuestionFormInput {
+  form_uid: String
+  name: String
+  description: String
+  input_type_slug: String
+  choice_list: String = null
+  created_at: DateTime = "2023-08-03T04:09:57.071Z"
+  id: Int!
+  updated_at: DateTime! = "2023-08-03T04:09:57.072Z"
+}
+
+input CreateAnswerInput {
+  user_uid: String!
+  question_uid: String!
+  form_uid: String!
+  result: String!
+}
+
+input CreateVoteGameInput {
+  event_uid: String!
+  name: String!
+  description: String!
+  is_active: Boolean! = true
+  created_at: DateTime! = "2023-08-03T04:09:57.074Z"
+  choices_uid: String!
+}
+
+input UpdateVoteGameInput {
+  event_uid: String
+  name: String
+  description: String
+  is_active: Boolean = true
+  created_at: DateTime = "2023-08-03T04:09:57.074Z"
+  choices_uid: String
+  id: Int!
+  updated_at: DateTime! = "2023-08-03T04:09:57.076Z"
+}
+
+input CreateVoteGameChoiceInput {
+  event_uid: String!
+  choices: String!
+  is_active: Boolean! = true
+  created_at: DateTime! = "2023-08-03T04:09:57.078Z"
+}
+
+input UpdateVoteGameChoiceInput {
+  event_uid: String
+  choices: String
+  is_active: Boolean = true
+  created_at: DateTime = "2023-08-03T04:09:57.078Z"
+  id: Int!
+  updated_at: DateTime! = "2023-08-03T04:09:57.079Z"
+}
+
+input CreateVoteGameQuestionInput {
+  event_uid: String!
+  vote_game_uid: String!
+  question: String!
+  is_active: Boolean! = true
+  created_at: DateTime! = "2023-08-03T04:09:57.080Z"
+}
+
+input CreateVoteGameResultInput {
+  event_uid: String!
+  vote_game_uid: String!
+  question_uid: String!
+  result: String!
+  created_at: DateTime! = "2023-08-03T04:09:57.082Z"
+}
+
+input UpdateVoteGameResultInput {
+  event_uid: String
+  vote_game_uid: String
+  question_uid: String
+  result: String
+  created_at: DateTime = "2023-08-03T04:09:57.082Z"
+  id: Int!
+}
+
+input CreatePromotionInput {
+  name: String!
+  organize_uid: String!
+  event_uid: String!
+  promotion_code: String!
+
+  """percent or currency"""
+  discount_type: String!
+  value: Float!
+
+  """0 = unlimit, >0 = limit"""
+  limit: Int!
+  is_active: Boolean! = true
+  start_at: DateTime!
+  expired_at: DateTime!
+}
+
+input UpdatePromotionInput {
+  name: String
+  organize_uid: String
+  event_uid: String
+  promotion_code: String
+
+  """percent or currency"""
+  discount_type: String
+  value: Float
+
+  """0 = unlimit, >0 = limit"""
+  limit: Int
+  is_active: Boolean = true
+  start_at: DateTime
+  expired_at: DateTime
+  id: Int!
+  updated_at: DateTime! = "2023-08-03T04:09:57.085Z"
+}
+
+input CreatePromotionHistoryInput {
+  """Enter promotion Id"""
+  promotion_id: Int!
+
+  """Enter user Id"""
+  user_uid: String!
+}
+
+input UpdatePromotionHistoryInput {
+  """Enter promotion Id"""
+  promotion_id: Int
+
+  """Enter user Id"""
+  user_uid: String
+  id: Int!
+}
+
+input CreateTicketInput {
+  name: String!
+  registerform_uid: String!
+  description: String!
+  image_url: String!
+  price: Float!
+
+  """limit something"""
+  limit_type: String!
+
+  """0 = unlimit, >0 = limit"""
+  limit: Int!
+  discount_option: Boolean
+  is_active: Boolean! = true
+}
+
+input UpdateTicketInput {
+  name: String
+  registerform_uid: String
+  description: String
+  image_url: String
+  price: Float
+
+  """limit something"""
+  limit_type: String
+
+  """0 = unlimit, >0 = limit"""
+  limit: Int
+  discount_option: Boolean
+  is_active: Boolean = true
+  id: Int!
+}
+
+input CreateTicketUserInput {
+  ticket_uid: String!
+  user_uid: String!
+  quantity: Int!
+
+  """payment_type"""
+  payment_type: String!
+}
+
+input CreateUseTicketInput {
+  """Enter promotion Id"""
+  ticket_no: Int!
+}
+
+input UpdateUseTicketInput {
+  """Enter promotion Id"""
+  ticket_no: Int
+  id: Int!
+}

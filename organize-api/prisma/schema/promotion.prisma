@@ -1,0 +1,19 @@
+model Promotion {
+    id             Int       @id @default(autoincrement())
+    name           String
+    organize_uid   String
+    event_uid      String
+    promotion_code String    @unique
+    discount_type  String
+    value          Float
+    limit          Int?
+    amount         Int?
+    is_active      Boolean   @default(true)
+    start_at       DateTime
+    expired_at     DateTime
+    created_at     DateTime  @default(now())
+    updated_at     DateTime?
+    deleted_at     DateTime?
+
+    @@map("promotions")
+}

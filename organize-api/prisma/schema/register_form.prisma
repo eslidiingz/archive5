@@ -1,0 +1,18 @@
+model RegisterForm {
+    id            Int       @id @default(autoincrement())
+    uuid          String    @unique
+    event_uid     String
+    topic         String
+    description   String
+    require       Boolean   @default(true)
+    is_active     Boolean   @default(true)
+    start_date    DateTime?
+    end_date      DateTime?
+    created_at    DateTime  @default(now())
+    updated_at    DateTime?
+    deleted_at    DateTime?
+    ticket_option Boolean?
+    form_type     String?
+
+    @@map("register_form")
+}

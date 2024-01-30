@@ -1,0 +1,11 @@
+{
+  "chainMoralis": "bsc",
+  "chainId": "56",
+  "whitelist": [
+    "0x209ABdcD0B6e9cC0c11F79a72C7B0c8F485Fcb0c",
+    "0xe9e7cea3dedca5984780bafc599bd69add087d56"
+  ],
+  "whitelistABI": ["utils/abis/avatar.json", "utils/abis/token.json"],
+  "appId": "lTusZCaqLLgzDvV54AqtRIsO6Y9WCpz0SMin7N83",
+  "serverURL": "https://lvgussvbescu.usemoralis.com:2053/server"
+}

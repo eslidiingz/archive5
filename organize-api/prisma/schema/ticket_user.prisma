@@ -1,0 +1,25 @@
+model TicketUser {
+    id               Int           @id @default(autoincrement())
+    ticket_uid       String        
+    ticket_no        Int           @unique
+    user_uid         String
+    quantity         Int
+    price            Float
+    total            Float
+    payment_type     String?
+    payment_status   String?
+    use_status       String?
+    created_at       DateTime      @default(now())
+    updated_at       DateTime?
+    deleted_at       DateTime?
+    ticket           Ticket?       @relation(fields: [ticket_uid], references: [uuid])
+
+    
+    @@map("ticket_user")
+}
+
+model Ticket {
+    uuid             String        @unique
+    ticket_user      TicketUser[]
+}
+

@@ -1,0 +1,26 @@
+model MasterPackageList {
+    id                   Int                   @id @default(autoincrement())
+    package_uid          String
+    permission_slug      String
+    limit_slug           String
+    limit                Int
+    unit                 String?
+    is_active            Boolean               @default(true)
+    created_at           DateTime              @default(now())
+    updated_at           DateTime?
+    deleted_at           DateTime?
+    masterPackage        MasterPackage?        @relation(fields: [package_uid], references: [uuid])
+    masterPermissionList MasterPermissionList? @relation(fields: [permission_slug], references: [slug])
+
+    @@map("mst-package-list")
+}
+
+model MasterPackage {
+    uuid        String              @unique
+    packageList MasterPackageList[]
+}
+
+model MasterPermissionList {
+    slug        String              @unique
+    packageList MasterPackageList[]
+}

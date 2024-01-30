@@ -1,0 +1,302 @@
+.gasha-itembox {
+  width: 100%;
+  cursor: pointer;
+  padding-top: 100%;
+  position: relative;
+}
+
+.gasha-avatar.disable {
+  background-image: url("../assets/image/gasha-avatar-disable.jpg");
+  background-size: 100%;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 100%;
+  cursor: pointer;
+  padding-top: 113%;
+  position: relative;
+  margin: 0 auto;
+}
+.gasha-avatar {
+  background-image: url("../assets/image/gasha-avatar.jpg");
+  background-size: 200%;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 100%;
+  cursor: pointer;
+  padding-top: 113%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.gasha-avatar:hover {
+  background-position: right top;
+  cursor: url("../assets/image/mouse/mouse-hover.png"), pointer;
+}
+
+.avatar-cover {
+  width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.aspect-ratio-avatar {
+  background-color: #ff0000;
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.aspect-ratio-avatar-inset {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: azure;
+}
+
+.gasha-avatar::before {
+  background-image: url("../assets/image/gasha-avatar-ghost.png");
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: -22px;
+  z-index: 2;
+  margin-top: -29px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 2s ease;
+  opacity: 0;
+  margin-top: -15%;
+}
+
+.gasha-avatar:hover::before {
+  background-image: url("../assets/image/gasha-avatar-ghost.png");
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: -22px;
+  z-index: 2;
+  margin-top: -29px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: ghostfly;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: all 1s ease;
+  opacity: 1;
+}
+
+@keyframes ghostfly {
+  0% {
+    margin-top: -15%;
+  }
+
+  25% {
+  }
+
+  50% {
+    margin-top: -17%;
+  }
+
+  75% {
+  }
+
+  100% {
+    margin-top: -15%;
+  }
+}
+
+.open-box {
+  background-image: url("../assets/image/treasure_close.jpg");
+  background-size: 100%;
+  background-position: left top;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  max-width: 800px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-box.box-opening {
+  background-image: url("../assets/image/treasure_hover.jpg");
+}
+
+.open-box.box-opened {
+  background-image: url("../assets/image/treasure_open.jpg");
+}
+
+.open-box::before {
+  padding-top: 100%;
+  content: "";
+  display: block;
+}
+
+.btn-openbox {
+  background-image: url("../assets/image/claim-btn.png");
+  width: 260px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: auto;
+}
+
+.open-box .btn-openbox:hover {
+  background-image: url("../assets/image/claim-btn-hover.png");
+}
+
+.item-opened-box {
+  position: absolute;
+  margin: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-opened-box .img-open-box {
+  width: 150px;
+  height: auto;
+  margin: 0 30px;
+}
+
+.loader-treasure-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.world {
+  background-image: url("../assets/image/map/world_bg.png");
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  background-size: 100%;
+  max-width: 800px;
+  background-repeat: no-repeat;
+}
+
+.world-nothover {
+  background-image: url("../assets/image/map/world_bg_0_w1.jpg");
+  background-position: center center;
+  padding-top: 100%;
+  position: absolute;
+  background-size: 94%;
+  max-width: 800px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  top: 0px;
+  left: 0;
+  right: 0;
+  transition: all 0.4s ease;
+}
+
+.btn-world-overlay {
+  position: absolute;
+  z-index: 2;
+  width: 38%;
+  height: 38%;
+}
+
+.btn-world-kurnugia {
+  top: 12%;
+  left: 50%;
+  margin-left: -19%;
+}
+
+.btn-world-epsilon {
+  top: 50%;
+  left: 50%;
+  margin-left: -43%;
+}
+
+.btn-world-luxvana {
+  top: 50%;
+  left: 50%;
+  margin-left: 4%;
+}
+
+.world-nothover.kurnugia {
+  background-image: url("../assets/image/map/world_bg_1_w_1_hover.jpg");
+  transition: all 0.4s ease;
+}
+
+.world-nothover.luxvana {
+  background-image: url("../assets/image/map/world_bg_Lux_hover_locked.jpg");
+  transition: all 0.4s ease;
+}
+
+.world-nothover.epsilon {
+  background-image: url("../assets/image/map/world_bg_Epsi_hover_locked.jpg");
+  transition: all 0.4s ease;
+}
+
+.break-word {
+  word-break: break-word;
+}
+
+.card-item-collection {
+  background-color: #262626;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative; /* If you want text inside of it */
+}
+
+.card-item-collection .item-collection-inset {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.reward-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.reward-box .img-open-box {
+  width: 50%;
+  padding: 2%;
+}
+
+.reward-box-close {
+  width: 100%;
+}
+
+.collection-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

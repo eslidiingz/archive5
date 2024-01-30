@@ -1,0 +1,18 @@
+model VoteGameQuestion {
+    id            Int       @id @default(autoincrement())
+    uid           String    @unique
+    event_uid     String?
+    vote_game_uid String
+    question      String
+    is_active     Boolean   @default(true)
+    created_at    DateTime  @default(now())
+    updated_at    DateTime?
+    vote_game     VoteGame  @relation(fields: [vote_game_uid], references: [uid])
+
+    @@map("vote_game_question")
+}
+
+model VoteGame {
+    uid              String             @unique
+    question VoteGameQuestion[]
+}

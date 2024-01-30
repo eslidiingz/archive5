@@ -1,0 +1,15 @@
+model MasterPackage {
+    id          Int       @id @default(autoincrement())
+    uuid        String    @unique
+    name        String    @unique
+    description String
+    image_url   String
+    price       Float
+    discount    Float
+    period      Int
+    created_at  DateTime  @default(now())
+    updated_at  DateTime?
+    deleted_at  DateTime?
+
+    @@map("mst-package")
+}

@@ -1,0 +1,189 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?zpqfw');
+  src:  url('fonts/icomoon.eot?zpqfw#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?zpqfw') format('truetype'),
+    url('fonts/icomoon.woff?zpqfw') format('woff'),
+    url('fonts/icomoon.svg?zpqfw#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Ticket:before {
+  content: "\e934";
+}
+.icon-Ticket-1:before {
+  content: "\e935";
+}
+.icon-CurrencyBtc:before {
+  content: "\e930";
+}
+.icon-Minus:before {
+  content: "\e931";
+}
+.icon-Square-1:before {
+  content: "\e932";
+}
+.icon-Users:before {
+  content: "\e933";
+}
+.icon-Copy:before {
+  content: "\e925";
+}
+.icon-Eye:before {
+  content: "\e926";
+}
+.icon-EyeClosed:before {
+  content: "\e927";
+}
+.icon-Image:before {
+  content: "\e928";
+}
+.icon-List:before {
+  content: "\e929";
+}
+.icon-LockKey:before {
+  content: "\e92a";
+}
+.icon-NotePencil:before {
+  content: "\e92b";
+}
+.icon-Trash:before {
+  content: "\e92c";
+}
+.icon-User:before {
+  content: "\e92d";
+}
+.icon-X:before {
+  content: "\e92e";
+}
+.icon-XCircle:before {
+  content: "\e92f";
+}
+.icon-Circle:before {
+  content: "\e923";
+}
+.icon-RadioButton:before {
+  content: "\e924";
+}
+.icon-Aliah-Lane:before {
+  content: "\e900";
+}
+.icon-ArrowLeft:before {
+  content: "\e901";
+}
+.icon-ArrowRight:before {
+  content: "\e902";
+}
+.icon-CalendarBlank:before {
+  content: "\e903";
+}
+.icon-CalendarBlank-1:before {
+  content: "\e904";
+}
+.icon-CaretDown:before {
+  content: "\e905";
+}
+.icon-CaretDown-1:before {
+  content: "\e906";
+}
+.icon-CaretLeft:before {
+  content: "\e907";
+}
+.icon-CaretRight:before {
+  content: "\e908";
+}
+.icon-ChartPieSlice:before {
+  content: "\e909";
+}
+.icon-ChartPieSlice-1:before {
+  content: "\e90a";
+}
+.icon-CheckSquare:before {
+  content: "\e90b";
+}
+.icon-ClipboardText:before {
+  content: "\e90c";
+}
+.icon-ClipboardText-1:before {
+  content: "\e90d";
+}
+.icon-DotsThreeVertical:before {
+  content: "\e90e";
+}
+.icon-FileCsv:before {
+  content: "\e90f";
+}
+.icon-FilePdf:before {
+  content: "\e910";
+}
+.icon-FloppyDisk:before {
+  content: "\e911";
+}
+.icon-GameController:before {
+  content: "\e912";
+}
+.icon-GameController-1:before {
+  content: "\e913";
+}
+.icon-MagnifyingGlass:before {
+  content: "\e914";
+}
+.icon-PaintBrushHousehold:before {
+  content: "\e915";
+}
+.icon-PaintBrushHousehold-1:before {
+  content: "\e916";
+}
+.icon-Plus:before {
+  content: "\e917";
+}
+.icon-Printer:before {
+  content: "\e918";
+}
+.icon-Receipt:before {
+  content: "\e919";
+}
+.icon-Receipt-1:before {
+  content: "\e91a";
+}
+.icon-Sidebar:before {
+  content: "\e91b";
+}
+.icon-SignOut:before {
+  content: "\e91c";
+}
+.icon-Square:before {
+  content: "\e91d";
+}
+.icon-Tag:before {
+  content: "\e91e";
+}
+.icon-Tag-1:before {
+  content: "\e91f";
+}
+.icon-UserCircle:before {
+  content: "\e920";
+}
+.icon-UserGear:before {
+  content: "\e921";
+}
+.icon-UserGear-1:before {
+  content: "\e922";
+}

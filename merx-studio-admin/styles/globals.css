@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+
+* {
+  font-family: 'Mitr', sans-serif;
+  font-size: 16px;
+}
+
+@import './formElement.css'

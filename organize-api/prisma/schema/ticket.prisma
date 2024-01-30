@@ -1,0 +1,25 @@
+model Ticket {
+    id               Int           @id @default(autoincrement())
+    registerform_uid String
+    uuid             String        @unique
+    name             String
+    description      String
+    image_url        String
+    price            Float
+    limit_type       String
+    limit            Int
+    amount           Int
+    discount_option  Boolean?
+    is_active        Boolean
+    created_at       DateTime      @default(now())
+    updated_at       DateTime?
+    deleted_at       DateTime?
+    RegisterForm     RegisterForm? @relation(fields: [registerform_uid], references: [uuid])
+
+    @@map("ticket")
+}
+
+model RegisterForm {
+    uuid   String   @unique
+    ticket Ticket[]
+}

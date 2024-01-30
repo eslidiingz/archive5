@@ -1,0 +1,34 @@
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+enum EConnectionActivityStatus {
+    CONNECTED
+    DISCONNECTED
+    KICKED
+    BANNED
+}
+
+model ConnectionActivities {
+    id           Int       @id @default(autoincrement())
+
+    uuid         String
+    logged_by    String?
+    note         String?
+
+    status       EConnectionActivityStatus
+    created_at   DateTime  @default(now())
+    updated_at   DateTime?
+    deleted_at   DateTime?
+
+    organizer    Organizers @relation("organizer_connection_activities", fields: [uuid], references: [uuid])
+
+    @@map("connection_activity")
+}
+
+model Organizers {
+    uuid         String    @unique
+    connection_activities  ConnectionActivities[]   @relation("organizer_connection_activities")
+    @@map("organizers")
+}

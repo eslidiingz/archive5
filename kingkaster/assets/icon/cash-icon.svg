@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.499" height="24.499" viewBox="0 0 24.499 24.499">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+    </style>
+  </defs>
+  <g id="Group_7519" data-name="Group 7519" transform="translate(-83.954 -41.312)">
+    <g id="Group_7516" data-name="Group 7516" transform="translate(83.954 41.312)">
+      <path id="Path_9563" data-name="Path 9563" class="cls-1" d="M96.2,65.811a12.25,12.25,0,1,1,12.25-12.25h0A12.261,12.261,0,0,1,96.2,65.811Zm0-23.284a11.041,11.041,0,1,0,11.035,11.047v0A11.054,11.054,0,0,0,96.2,42.525Z" transform="translate(-83.954 -41.312)"/>
+    </g>
+    <g id="Group_7517" data-name="Group 7517" transform="translate(86.262 43.628)">
+      <path id="Path_9564" data-name="Path 9564" class="cls-1" d="M96.171,63.475a9.937,9.937,0,1,1,9.937-9.937h0A9.95,9.95,0,0,1,96.171,63.475Zm0-19.272a9.335,9.335,0,1,0,9.335,9.335A9.334,9.334,0,0,0,96.171,44.2Z" transform="translate(-86.234 -43.6)"/>
+    </g>
+    <g id="KK" class="cls-2" transform="translate(89.598 49.905)">
+      <g id="Group_7706" data-name="Group 7706" class="cls-2">
+        <path id="Path_9758" data-name="Path 9758" class="cls-1" d="M89.529,49.8h1.5v3.04l2.761-3.04H95.52l-2.594,2.906,2.727,4.265h-1.6l-2.059-3.307L91.033,54.7v2.272h-1.5Z" transform="translate(-89.529 -49.8)"/>
+        <path id="Path_9759" data-name="Path 9759" class="cls-1" d="M96.613,49.8h1.5v3.04l2.761-3.04H102.6l-2.594,2.906,2.727,4.265h-1.6l-2.059-3.307L98.117,54.7v2.272h-1.5Z" transform="translate(-89.441 -49.8)"/>
+      </g>
+    </g>
+  </g>
+</svg>

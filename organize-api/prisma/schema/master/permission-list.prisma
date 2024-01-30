@@ -1,0 +1,12 @@
+model MasterPermissionList {
+    id          Int       @id @default(autoincrement())
+    slug        String    @unique
+    name        String    @unique
+    description String
+    is_active   Boolean   @default(true)
+    created_at  DateTime  @default(now())
+    updated_at  DateTime?
+    deleted_at  DateTime?
+
+    @@map("mst-permission-list")
+}

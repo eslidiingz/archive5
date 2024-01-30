@@ -1,0 +1,24 @@
+model Answer {
+    id           Int           @id @default(autoincrement())
+    user_uid     String
+    question_uid String
+    form_uid     String
+    result       String
+    created_at   DateTime      @default(now())
+    updated_at   DateTime?
+    deleted_at   DateTime?
+    RegisterForm RegisterForm? @relation(fields: [form_uid], references: [uuid])
+    QuestionForm QuestionForm? @relation(fields: [question_uid], references: [uuid])
+
+    @@map("answer")
+}
+
+model RegisterForm {
+    uuid   String   @unique
+    answer Answer[]
+}
+
+model QuestionForm {
+    uuid   String   @unique
+    answer Answer[]
+}

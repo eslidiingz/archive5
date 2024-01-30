@@ -1,0 +1,10 @@
+model VoteGameResult {
+    id            Int      @id @default(autoincrement())
+    event_uid     String?
+    vote_game_uid String?
+    question_uid  String
+    result        String
+    created_at    DateTime @default(now())
+
+    @@map("vote_game_result")
+}

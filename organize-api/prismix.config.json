@@ -1,0 +1,28 @@
+{
+  "mixers": [
+    {
+      "input": [
+        "base.prisma",
+        "./prisma/schema/organizer.prisma",
+        "./prisma/schema/connection_activity.prisma",
+        "./prisma/schema/master/package-list.prisma",
+        "./prisma/schema/master/package.prisma",
+        "./prisma/schema/master/permission-list.prisma",
+        "./prisma/schema/master/form_input_type.prisma",
+        "./prisma/schema/register_form.prisma",
+        "./prisma/schema/question_form.prisma",
+        "./prisma/schema/answer.prisma",
+        "./prisma/schema/votegame_question.prisma",
+        "./prisma/schema/votegame.prisma",
+        "./prisma/schema/votegame_choice.prisma",
+        "./prisma/schema/votegame_result.prisma",
+        "./prisma/schema/promotion.prisma",
+        "./prisma/schema/promotion_history.prisma",
+        "./prisma/schema/ticket.prisma",
+        "./prisma/schema/ticket_user.prisma",
+        "./prisma/schema/use_ticket.prisma"
+      ],
+      "output": "prisma/schema.prisma"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "chainMoralis": "bsc testnet",
+  "chainId": "97",
+  "whitelist": [
+    "0x9E495D22955305A816433C64C7dcAB65AB9FB904",
+    "0x74D8D0B411b3aDb5d3bC5df61521758daF3ded62",
+    "0x989E3729734FCeeeEBA63eaAd758c4D0Cf74a8d7",
+    "0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee"
+  ],
+  "whitelistABI": [
+    "utils/abis/avatar.json",
+    "utils/abis/mint.json",
+    "utils/abis/item.json",
+    "utils/abis/token.json"
+  ],
+  "appId": "FgWbLSciH4FAYcXW9Ed1aUt3bzHZi9omWEKGIKyM",
+  "serverURL": "https://y7iljrjbd58w.usemoralis.com:2053/server"
+}

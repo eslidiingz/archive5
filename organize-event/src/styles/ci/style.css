@@ -1,0 +1,93 @@
+.ci-main-layout {
+    margin: 80px 0;
+}
+
+.ci-txt-title {
+    font-family: var(--font-audiowide);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.ci-txt-topic {
+    font-family: var(--font-audiowide);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.ci-txt-topic-detail {
+    font-family: var(--font-audiowide);
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration-line: underline;
+}
+
+.ci-txtsubmenu {
+    font-family: var(--font-inter);
+    font-size: 14px;
+    color: rgb(115, 115, 115);
+}
+
+.ci-main-layout .accordion-button {
+    font-size: 1rem;
+    color: #000;
+    text-align: left;
+    border: 1px solid transparent;
+    background: var(--color-gradient-gray);
+}
+
+.ci-main-layout .accordion-item {
+    border: 1px solid transparent;
+    background: var(--color-gradient-gray);
+}
+
+code[class*=language-], pre[class*=language-] {
+    color: #f8f8f2;
+    background: none;
+    text-shadow: 0 1px rgba(0, 0, 0, .3);
+    font-family: var(--font-inter);
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+    color: #6272a4;
+}
+
+.token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
+    color: #ff79c6;
+}
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+    color: #50fa7b;
+}
+
+.token.atrule, .token.attr-value, .token.function, .token.class-name {
+    color: #ffcd37;
+}
+
+.token.punctuation {
+    color: #000;
+}
+
+.token.danger {
+    color: #ff457f;
+}
+
+.token.title {
+    color: #7dbeff;
+}
+
+.token.detailvalue {
+    color: #c2cdff;
+}

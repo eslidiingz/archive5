@@ -1,0 +1,11 @@
+model FormInputType {
+    id         Int       @id @default(autoincrement())
+    slug       String    @unique
+    name       String    @unique
+    desciption String
+    created_at DateTime  @default(now())
+    updated_at DateTime?
+    deleted_at DateTime?
+
+    @@map("form_input_type")
+}

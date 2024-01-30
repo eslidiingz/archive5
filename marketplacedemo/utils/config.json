@@ -1,0 +1,16 @@
+{
+  "openProcess": true,
+  "basePrice": 500,
+  "baseToken": "EPIC",
+  "TokenAddress": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+  "ItemAddress": "",
+  "AvatarAddress": "0x209ABdcD0B6e9cC0c11F79a72C7B0c8F485Fcb0c",
+  "MintAddress": "",
+  "MarketPlaceAddress": "0xd113409F5Ebc799b204C97071E6Dd651e8614Eb3",
+  "MarketAuctionAddress": "0x7b86d2f02c395FE204a60739E6cC2ba37d7a34d7",
+  "MarketSwapAddress": "",
+  "blockExplorer": "https://bscscan.com",
+  "shuffleURI": "https://cdn.epicgathering.io/shuffle",
+  "mintAssetURI": "https://cdn.epicgathering.io/upload_json",
+  "collectionApi": "https://collection.epicgathering.io/api/v1"
+}

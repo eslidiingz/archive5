@@ -1,0 +1,14 @@
+model UseTicket {
+    id                  Int         @id @default(autoincrement())
+    ticket_user_id      Int
+    ticket_no           Int
+    created_at          DateTime    @default(now())
+    ticket_user         TicketUser? @relation(fields: [ticket_user_id], references: [id])
+
+    @@map("use_ticket")
+}
+
+model TicketUser {
+    id                  Int         @id @default(autoincrement())
+    use_tickets         UseTicket[]
+}

@@ -1,0 +1,209 @@
+.world-kurnugia {
+background-image: url("../assets/image/map/region_Kur_stage_1_active.jpg");
+background-position: center center;
+  padding-top: 100%;
+  position: absolute;
+  background-size: 94%;
+  max-width: 800px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  top: 0px;
+  left: 0;
+  right: 0;
+  transition: all 0.4s ease;
+}
+
+.cursor-pointer {
+  cursor: url(../assets/image/mouse/mouse-hover.png), pointer;
+}
+
+.zoner {
+    position: absolute;
+    width: 6.6%;
+    height: 6.7%;
+}
+.zone-1 {
+    top: 66.7%;
+    left: 48.5%;
+}
+
+.zone-2 {
+    top: 52.9%;
+    left: 52.2%;
+    display: none;
+}
+.world-kurnugia.stage-2 .zone-1 { display: block; }
+.world-kurnugia.stage-2 .zone-2 { display: block; }
+
+.zone-3 {
+    top: 46.0%;
+    left: 43.4%;
+    display: none;
+}
+.world-kurnugia.stage-3 .zone-1 { display: block; }
+.world-kurnugia.stage-3 .zone-2 { display: block; }
+.world-kurnugia.stage-3 .zone-3 { display: block; }
+
+.zone-4 {
+    top: 37.4%;
+    left: 27.9%;
+    display: none;
+}
+.world-kurnugia.stage-4 .zone-1 { display: block; }
+.world-kurnugia.stage-4 .zone-2 { display: block; }
+.world-kurnugia.stage-4 .zone-3 { display: block; }
+.world-kurnugia.stage-4 .zone-4 { display: block; }
+
+.zone-5 {
+    top: 24.6%;
+    left: 26.6%;
+    display: none;
+}
+.world-kurnugia.stage-5 .zone-1 { display: block; }
+.world-kurnugia.stage-5 .zone-2 { display: block; }
+.world-kurnugia.stage-5 .zone-3 { display: block; }
+.world-kurnugia.stage-5 .zone-4 { display: block; }
+.world-kurnugia.stage-5 .zone-5 { display: block; }
+
+.zone-6 {
+    top: 30.9%;
+    left: 38.1%;
+    display: none;
+}
+.world-kurnugia.stage-6 .zone-1 { display: block; }
+.world-kurnugia.stage-6 .zone-2 { display: block; }
+.world-kurnugia.stage-6 .zone-3 { display: block; }
+.world-kurnugia.stage-6 .zone-4 { display: block; }
+.world-kurnugia.stage-6 .zone-5 { display: block; }
+.world-kurnugia.stage-6 .zone-6 { display: block; }
+
+.zone-7 {
+    top: 35.9%;
+    left: 47.5%;
+    display: none;
+}
+.world-kurnugia.stage-7 .zone-1 { display: block; }
+.world-kurnugia.stage-7 .zone-2 { display: block; }
+.world-kurnugia.stage-7 .zone-3 { display: block; }
+.world-kurnugia.stage-7 .zone-4 { display: block; }
+.world-kurnugia.stage-7 .zone-5 { display: block; }
+.world-kurnugia.stage-7 .zone-6 { display: block; }
+.world-kurnugia.stage-7 .zone-7 { display: block; }
+
+.zone-8 {
+    top: 28.8%;
+    left: 59.9%;
+    display: none;
+}
+.world-kurnugia.stage-8 .zone-1 { display: block; }
+.world-kurnugia.stage-8 .zone-2 { display: block; }
+.world-kurnugia.stage-8 .zone-3 { display: block; }
+.world-kurnugia.stage-8 .zone-4 { display: block; }
+.world-kurnugia.stage-8 .zone-5 { display: block; }
+.world-kurnugia.stage-8 .zone-6 { display: block; }
+.world-kurnugia.stage-8 .zone-7 { display: block; }
+.world-kurnugia.stage-8 .zone-8 { display: block; }
+
+.zone-9 {
+    top: 41.3%;
+    left: 58.9%;
+    display: none;
+}
+.world-kurnugia.stage-9 .zone-1 { display: block; }
+.world-kurnugia.stage-9 .zone-2 { display: block; }
+.world-kurnugia.stage-9 .zone-3 { display: block; }
+.world-kurnugia.stage-9 .zone-4 { display: block; }
+.world-kurnugia.stage-9 .zone-5 { display: block; }
+.world-kurnugia.stage-9 .zone-6 { display: block; }
+.world-kurnugia.stage-9 .zone-7 { display: block; }
+.world-kurnugia.stage-9 .zone-8 { display: block; }
+.world-kurnugia.stage-9 .zone-9 { display: block; }
+
+.zone-10 {
+    top: 38.8%;
+    left: 71.9%;
+    display: none;
+}
+.world-kurnugia.stage-10 .zone-1 { display: block; }
+.world-kurnugia.stage-10 .zone-2 { display: block; }
+.world-kurnugia.stage-10 .zone-3 { display: block; }
+.world-kurnugia.stage-10 .zone-4 { display: block; }
+.world-kurnugia.stage-10 .zone-5 { display: block; }
+.world-kurnugia.stage-10 .zone-6 { display: block; }
+.world-kurnugia.stage-10 .zone-7 { display: block; }
+.world-kurnugia.stage-10 .zone-8 { display: block; }
+.world-kurnugia.stage-10 .zone-9 { display: block; }
+.world-kurnugia.stage-10 .zone-10 { display: block; }
+
+.zone-btn {
+    background-image: url("../assets/image/map/map_dropdown_list.png");
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-weight: 800;
+    -webkit-text-stroke: 1px #000000;
+    color: #fecf1c;
+    font-size: 14px;
+}
+
+.world-kurnugia.stage-1 { background-image: url("../assets/image/map/region_Kur_stage_1_active.jpg");}
+.world-kurnugia.stage-2 { background-image: url("../assets/image/map/region_Kur_stage_2_active.jpg");}
+.world-kurnugia.stage-3 { background-image: url("../assets/image/map/region_Kur_stage_3_active.jpg");}
+.world-kurnugia.stage-4 { background-image: url("../assets/image/map/region_Kur_stage_4_active.jpg");}
+.world-kurnugia.stage-5 { background-image: url("../assets/image/map/region_Kur_stage_5_active.jpg");}
+.world-kurnugia.stage-6 { background-image: url("../assets/image/map/region_Kur_stage_6_active.jpg");}
+.world-kurnugia.stage-7 { background-image: url("../assets/image/map/region_Kur_stage_7_active.jpg");}
+.world-kurnugia.stage-8 { background-image: url("../assets/image/map/region_Kur_stage_8_active.jpg");}
+.world-kurnugia.stage-9 { background-image: url("../assets/image/map/region_Kur_stage_9_active.jpg");}
+.world-kurnugia.stage-10 { background-image: url("../assets/image/map/region_Kur_stage_10_active.jpg");}
+
+.zone-dropdown {
+    width: 210%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    left: -55%;
+    top: -48%;
+    position: relative;
+    justify-content: space-between;
+}
+.zone-dropdown .zone-child {
+    background-image: url("../assets/image/map/map_dropdown_list.png");
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+
+.zoner .zone-dropdown {
+    display: flex;
+    z-index: 0;
+}
+
+.zoner.active .zone-dropdown {
+    display: flex;
+}
+
+.zone-btn:hover {
+    background-image: url("../assets/image/map/map_dropdown_active.png");
+}
+.zone-btn.active {
+    background-image: url("../assets/image/map/map_dropdown_active.png");
+}
+.zone-btn.active::before {
+    background-image: url("../assets/image/map/map_dropdown_skull.png");
+    width: 150%;
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: -65%;
+    left: -23%;
+    background-size: 100%;
+    z-index: -1;
+}

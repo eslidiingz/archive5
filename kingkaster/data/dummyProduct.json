@@ -1,0 +1,128 @@
+[
+    {
+        "id": "1",
+        "title": "KingCaster T-Shirt New Collection 2020 Limited Edition",
+        "real_price": 175,
+        "old_price": 250,
+        "all_item": 3,
+        "discount_p": "ส่วนลด 30%",
+        "rating": 4.5,
+        "total_sell": "46.7K",
+        "favorite": "2,334",
+        "shipping": "0 - 70",
+        "color": [
+            {
+                "color_id": "0001",
+                "color_title": "Black"
+            },
+            {
+                "color_id": "0002",
+                "color_title": "Green"
+            },
+            {
+                "color_id": "0003",
+                "color_title": "Red"
+            },
+            {
+                "color_id": "0004",
+                "color_title": "Blue"
+            },
+            {
+                "color_id": "0005",
+                "color_title": "White"
+            }
+        ],
+        "size": [
+            {
+                "size_id":"0001",
+                "size_title":"S"
+            },
+            {
+                "size_id":"0002",
+                "size_title":"M"
+            },
+            {
+                "size_id":"0003",
+                "size_title":"L"
+            }
+        ],
+        "description": "เสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดีเสื้อยืดสวย ผ้าเนื้อดี"
+    },
+    {
+        "id": "2",
+        "title": "KingCaster T-Shirt New Collection 2020 Limited Edition",
+        "real_price": 175,
+        "old_price": 250,
+        "all_item": 300,
+        "discount_p": "ส่วนลด 30%",
+        "rating": 3,
+        "total_sell": "1.7K",
+        "favorite": "100",
+        "shipping": "0 - 70",
+        "color": [
+            {
+                "color_id": "0001",
+                "color_title": "Black"
+            },
+            {
+                "color_id": "0002",
+                "color_title": "Green"
+            }
+         
+        ],
+        "size": [
+
+            {
+                "size_id":"0002",
+                "size_title":"M"
+            },
+            {
+                "size_id":"0003",
+                "size_title":"L"
+            }
+        ],
+        "description": "-"
+    },
+    {
+        "id": "3",
+        "title": "KingCaster T-Shirt New Collection 2020 Limited Edition",
+        "real_price": 175,
+        "old_price": 250,
+        "all_item": 3000,
+        "discount_p": "ส่วนลด 30%",
+        "rating": 5,
+        "total_sell": "100",
+        "favorite": "20",
+        "shipping": "0 - 70",
+        "color": [
+            {
+                "color_id": "0001",
+                "color_title": "Black"
+            },
+            {
+                "color_id": "0002",
+                "color_title": "Green"
+            },
+            {
+                "color_id": "0003",
+                "color_title": "Red"
+            },
+            {
+                "color_id": "0004",
+                "color_title": "Blue"
+            }
+           
+        ],
+        "size": [
+            {
+                "size_id":"0001",
+                "size_title":"S"
+            },
+            {
+                "size_id":"0002",
+                "size_title":"M"
+            }
+        ],
+        "description": "--"
+    }
+]

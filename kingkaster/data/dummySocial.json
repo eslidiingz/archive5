@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Whatsapp",
+        "icon": "whatsapp",
+        "type": "whatsapp",
+        "uri": "www.Whatsapp.com",
+        "color": "#25D366"
+    },
+    {
+        "id": 2,
+        "title": "chat",
+        "icon": "instagram",
+        "type": "instagram",
+        "uri": "https://www.instagram.com",
+        "color": "#E1306C"
+    },
+    {
+        "id": 3,
+        "title": "story",
+        "icon": "instagram",
+        "type": "instagramstory",
+        "uri": "https://www.instagram.com",
+        "color": "#E1306C"
+    },
+    {
+        "id": 4,
+        "title": "Facebook",
+        "icon": "facebook",
+        "type": "facebook",
+        "uri": "https://www.facebook.com",
+        "color": "#4267B2"
+    },
+    {
+        "id": 5,
+        "title": "Messager",
+        "icon": "facebook-messenger",
+        "type": "facebook-messenger",
+        "uri": "https://www.messenger.com",
+        "color": "#00B2FF"
+    }
+]
